@@ -2,7 +2,7 @@
   "project":                    "./src/Sdl3Sharp.Ffi",
   "logoFile":                   "./assets/icon.txt",
 
-  "runtimesVersion":            "3.5.2",
+  "runtimesVersion":            "3.6.0",
   "runtimesUrl":                "https://github.com/Sdl3Sharp/libffi/releases/download/v{0}/runtimes.zip",
   "runtimesLicenseFileUrl":     "https://github.com/Sdl3Sharp/libffi/releases/download/v{0}/LICENSE",
 
