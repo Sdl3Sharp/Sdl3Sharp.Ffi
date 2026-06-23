@@ -3,8 +3,8 @@
         <TargetFramework>net10.0</TargetFramework>
 
         <PackageId>Sdl3Sharp.Ffi</PackageId>
-        <VersionPrefix>0.5.0</VersionPrefix>
-        <VersionSuffix>alpha6</VersionSuffix>        
+        <VersionPrefix>0.5.1</VersionPrefix>
+        <VersionSuffix>alpha.1</VersionSuffix>        
         <Description>SDL3#'s libffi bindings</Description>
         <Authors>Felix Rüdiger</Authors>
 
