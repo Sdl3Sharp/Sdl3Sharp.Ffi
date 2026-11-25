@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-pack-release-push:
+  build-pack-push-release:
     runs-on: ubuntu-latest
 
     env:
