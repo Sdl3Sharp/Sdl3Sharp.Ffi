@@ -21,21 +21,24 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: recursive
 
-      - name: Setup .NET 10 SDK
-        uses: actions/setup-dotnet@v4
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: 10.0.x
+          dotnet-version: latest
+
+      - name: Make sure make.cs wrapper is executable
+        run: chmod +x ./make.sh
 
       - name: Build
-        run: sh ./make.sh build --configuration Release
+        run: ./make.sh build --configuration Release
 
       - name: Pack
-        run: sh ./make.sh pack --configuration Release --strict
+        run: ./make.sh pack --configuration Release --strict
 
       - name: Verify package output
         shell: bash
@@ -229,7 +232,7 @@ jobs:
 
       - name: Push NuGet packages with Trusted Publishing
         run: >-
-          sh ./make.sh push
+          ./make.sh push
           --nuget-user "${{ secrets.NUGET_USER }}"
           --oidc-provider github
           --configuration Release
